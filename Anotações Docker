@@ -11,6 +11,28 @@ Docker utiliza os serviços do LXC (Linux Containers).
 
 ===========================================================================================
 
-Por que não VM?
+LXC: Já existia antes do Docker.
+Docker cria uma camada (Docker Engine), interage com os containers do LXC.
 
+===========================================================================================
+
+Containers:
+
+Segragação de processos no mesmo Kernel (Isolamento).
+Sistemas de arquivos criados a partir de uma imagem.
+Ambientes leve e portáteis no qual aplicações são executadas.
+Encapsula todos os binários e bibliotecas necessárias para execução de uma API.
+Algo entre um chroot e uma VM.
+
+Dentro de um container temos que ser o mais minimalistas possíveis.
+
+chroot: redefine a pasta raiz para um determinado processo.
+
+
+============================================================================================
+
+O que são imagens Docker:
+
+São modelos de sistemas de arquivo para criar um Container.
+Um container é um processo rodando dentro do SO, já a imagem é um arquivo no qual o container se baseia.
 
