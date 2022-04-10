@@ -1,0 +1,16 @@
+O que é docker?
+
+Não é uma tecnologia de virtualização tradicional.
+É uma engine de administração de Containers.
+Container é um processo segregado do SO, onde podemos startar a aplicação de forma isolada do HOST.
+
+Não é uma VM tradicional, porque a VM precisa de várias coisas da máquina HOST.
+
+Docker utiliza os serviços do LXC (Linux Containers).
+
+
+===========================================================================================
+
+Por que não VM?
+
+
