@@ -34,5 +34,12 @@ chroot: redefine a pasta raiz para um determinado processo.
 O que são imagens Docker:
 
 São modelos de sistemas de arquivo para criar um Container.
+
 Um container é um processo rodando dentro do SO, já a imagem é um arquivo no qual o container se baseia.
+O container é o processo, é o que efetivamente está sendo utilizado dentro do SO.
+Já a imagem é o modelo em que nos baseamos para montar o container.
+
+============================================================================================
+
+
 

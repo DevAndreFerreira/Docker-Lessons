@@ -1,0 +1,26 @@
+Modo daemon: rodando via processo em background
+
+Subindo primeiro container:
+sudo docker container run hello-world
+
+Subindo debian container:
+
+sudo docker container run debian bash --version
+
+explicação: 
+comando run: executa a imagem
+comando container: cria o container e o inicializa
+
+o bash é executado dentro da imagem debian do container 
+
+Comando para listar todos os containers:
+sudo docker ps
+explicação: lista todos os containers que estão sendo executados
+atributos: -a //Para listar todos os containers mesmo os inativos
+
+Comando para remover um container:
+sudo docker --rm
+
+Comando para executar e remover um container:
+sudo docker run --rm <nome_container>
+
