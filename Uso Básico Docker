@@ -11,6 +11,10 @@ explicação:
 comando run: executa a imagem
 comando container: cria o container e o inicializa
 
+docker run nome_imagem:
+procura a imagem localmente, baixa a imagem caso não ache,
+valida o hash da imagem, executa o container.
+
 o bash é executado dentro da imagem debian do container 
 
 Comando para listar todos os containers:
@@ -23,4 +27,44 @@ sudo docker --rm
 
 Comando para executar e remover um container:
 sudo docker run --rm <nome_container>
+
+
+Comando para executar de forma iterativa:
+docker exec -it <nome_imagem/id_container> bash
+
+Comando para dar stop no container:
+docker stop <nome_imagem/id_container>
+
+Comando para start no container:
+docker start <nome_imagem/id_container>
+
+Comando para pausar o container:
+docker pause <nome_imagem/id_container>
+
+Comando para depausar o container:
+docker unpause <nome_imagem/id_container>
+
+Comando para run de forma iterativa:
+docker run -it <nome_imagem/id_container> bash
+
+Diferencia entre exec e run:
+O docker run cria um novo container e o executa.
+O docker exec permite executar um comando em um container de já está em 
+execução.
+
+Comando para run sem travar shell:
+docker run -d <nome_imagem/id_container>
+
+Comando para mapear a saída para o host:
+docker run -d -P <nome_imagem/id_container>
+
+exemplo: usar imagem dockersamples/static-site
+
+
+Comando para ver o mapeamento das portas:
+docker port <id_container>
+
+
+
+
 
