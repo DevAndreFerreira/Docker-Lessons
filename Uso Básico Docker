@@ -1,3 +1,5 @@
+Iniciando o docker: systemctl start docker
+
 Modo daemon: rodando via processo em background
 
 Subindo primeiro container:
@@ -64,6 +66,23 @@ exemplo: usar imagem dockersamples/static-site
 Comando para ver o mapeamento das portas:
 docker port <id_container>
 
+Comando para vermos as camadas de uma imagem:
+docker images <id_images>
+
+Comando para pararmos todos os containers em execução:
+docker stop $(docker container ls -q)
+
+
+
+Comando para vermos as imagens:
+docker images
+
+O que são imagem:
+
+São conjunto de camadas que em conjunto viram o Imagem.
+Todas as camadas são independentes.
+Um container é uma imagem com read/write.
+As imagens são imutáveis.
 
 
 
