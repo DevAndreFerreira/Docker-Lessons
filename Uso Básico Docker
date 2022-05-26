@@ -62,27 +62,42 @@ docker run -d -P <nome_imagem/id_container>
 
 exemplo: usar imagem dockersamples/static-site
 
-
 Comando para ver o mapeamento das portas:
 docker port <id_container>
 
 Comando para vermos as camadas de uma imagem:
 docker images <id_images>
 
+Comando para listar todos os containers que estão sendo executados:
+docker container ps
+
+Comando para listar todos os containers que estão/já foram executados:
+docker container ps -a
+
 Comando para pararmos todos os containers em execução:
 docker stop $(docker container ls -q)
 
+Comando para criarmos um container com um nome específico:
+docker container run --name <nome_container> -it debian bash
+Sendo debian a imagem e bash para entrarmos no shell da imagem.
+
+Comando para reaproveitarmos um container já existente:
+docker container start -ai <nome_imagem>
+Sendo -a para travarmos o terminar e i para executarmos de forma interativa.
+
+Comando para baixarmos a imagem do nginx e mapear a porta 8080:
+docker container run -p 8080:80 nginx
+
+Mapeando uma pasta do host para dentro do container:
+Primeiramente devemos criar uma pasta com os arquivos dentro de um diretório qualquer.
+Dentro desse diretório utilizamos o comando:
+docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+
+sendo que -p é para mapear a porta, sendo 8080 a porta do host. 
+-v é para criarmos os volumes.
 
 
-Comando para vermos as imagens:
-docker images
 
-O que são imagem:
-
-São conjunto de camadas que em conjunto viram o Imagem.
-Todas as camadas são independentes.
-Um container é uma imagem com read/write.
-As imagens são imutáveis.
 
 
 
