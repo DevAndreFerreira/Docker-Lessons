@@ -96,7 +96,9 @@ docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
 sendo que -p é para mapear a porta, sendo 8080 a porta do host. 
 -v é para criarmos os volumes.
 
-
+Executando um container em background:
+Dentro da pasta onde os arquivos estão mapeados, executamos o seguinte comando:
+docker container run -d --name ex-daemon-basic -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
 
 
 
